@@ -7,7 +7,7 @@ import 'package:pagination_demo/constants/Constants.dart';
 import '../colors/colors.dart';
 import '../utils/Utils.dart';
 
-AppBar buildPrimaryAppBar(context, profilePicturePath,
+AppBar buildPrimaryAppBar(context, title, profilePicturePath,
     {required onLeadingPress, required Function onProfileTap}) {
   return AppBar(
     elevation: 0.0,
@@ -16,8 +16,9 @@ AppBar buildPrimaryAppBar(context, profilePicturePath,
       icon: Icon(Icons.menu),
       onPressed: onLeadingPress,
     ),
-    // title:
-
+    title: Text(
+      title,
+    ),
     actions: [
       Padding(
         padding: EdgeInsets.symmetric(
@@ -52,7 +53,7 @@ Widget displayLoadingIndicator(BuildContext context) {
             : CupertinoActivityIndicator(
                 radius: 10,
               ),
-               verticalSpace(context, 0.02),
+        verticalSpace(context, 0.02),
         Text(
           'loading...',
           style: Theme.of(context).textTheme.bodyMedium,

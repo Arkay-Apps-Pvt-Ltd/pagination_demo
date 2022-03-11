@@ -39,7 +39,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: buildPrimaryAppBar(context, '$baseImagePath/avatar.png',
+      appBar: buildPrimaryAppBar(context, appName, '$baseImagePath/avatar.png',
           onLeadingPress: () {}, onProfileTap: () {}),
       body: SafeArea(
         child: Obx(
@@ -58,7 +58,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Padding buildBookList(BuildContext context, int index) {
     return Padding(
       padding: EdgeInsets.symmetric(
-        vertical: MediaQuery.of(context).size.longestSide * 0.01,
+        vertical: MediaQuery.of(context).size.longestSide * 0.008,
         horizontal: MediaQuery.of(context).size.longestSide * 0.02,
       ),
       child: Column(
